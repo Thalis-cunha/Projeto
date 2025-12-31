@@ -1,7 +1,7 @@
 
-public class semana2 {
+public class tiosprimitivos {
 
     public static void main(String[] args) {
-        System.out.println("Semana 2");
+        System.out.println("aqui estudarei as variaveis e constantes");
     }
 }
