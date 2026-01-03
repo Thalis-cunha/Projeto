@@ -13,7 +13,7 @@ public class While {
     
 }
 
-
+  
 
 
 // ao adicionar um numero abaixo de 10 ele vai fazer loop até chegar em 10 e encerrar o programa.
