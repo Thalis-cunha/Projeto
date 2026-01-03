@@ -1,3 +1,5 @@
+package EstruturaCondicionais;
+
 import javax.swing.*;
 
 public class IfComElse {
