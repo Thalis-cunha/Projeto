@@ -22,4 +22,4 @@ public class IfComElse {
         System.exit(0);
     }
     
-}
+} 

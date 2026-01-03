@@ -12,7 +12,7 @@ public class GetMessageEPrintStackTrace {
             erro.printStackTrace();
         }
     }
-    
+   
 }
 
 // erro por zero para demonstrar o uso da classe

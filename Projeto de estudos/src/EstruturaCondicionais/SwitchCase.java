@@ -53,6 +53,6 @@ public class SwitchCase {
     }
     
 }
-
+ 
 
 // repetido varias vezes para estudo de digitaçao, afim de aprimorar entendimento, e a estrutura de codigo limpo.

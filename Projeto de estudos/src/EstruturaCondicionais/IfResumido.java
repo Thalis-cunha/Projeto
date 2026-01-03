@@ -19,7 +19,6 @@ public class IfResumido {
     }
 }
 
-
 // feito 2 veses com modelos de if diferentes para melhor estudo e repeticoes de codigo, a segunda opçao é a resumida.
 
 // ? ponto de interrogaçao faz o papel do if

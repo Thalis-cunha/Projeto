@@ -31,5 +31,4 @@ public class ProdutoComDescontoIfElse {
     }
 }
 
-
 //muito pensamentos logicos, porem necessario gastar tempo para entender bem as opçoes que podem ser implementadas.

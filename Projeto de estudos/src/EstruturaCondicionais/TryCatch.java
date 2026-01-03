@@ -23,5 +23,4 @@ public class TryCatch {
       }
     }
   
-
 //finally{} sempre apresenta uma ultima mensagem apos o fechamento ou cancelamento do programa.

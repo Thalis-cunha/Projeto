@@ -22,5 +22,4 @@ public class RelogioFor {
     }
 }
 
-
 // para aumentar a contagem, necessario mudar a condiçao do if para a desejada

@@ -25,5 +25,4 @@ public class ContadorWhile {
     
 }
 
-
 //contator progressivo e regressivo.
