@@ -1,4 +1,4 @@
-package ProjetosParaFixaçao;
+package projetosparafixacao;
 
 public class RelogioFor {
     public static void main(String args[]){

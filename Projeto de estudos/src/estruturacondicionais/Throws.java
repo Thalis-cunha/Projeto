@@ -1,4 +1,4 @@
-package EstruturaCondicionais;
+package estruturacondicionais;
 
 import java.io.*;
 import javax.swing.JOptionPane;

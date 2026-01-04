@@ -1,4 +1,4 @@
-package TiposDeDados;
+package tiposdedados;
 
 import java.io.*;
 

@@ -1,4 +1,4 @@
-package EstruturaCondicionais;
+package estruturacondicionais;
 import javax.swing.JOptionPane;
 
 public class While {
