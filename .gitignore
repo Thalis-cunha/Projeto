@@ -1,2 +1,5 @@
-/Projeto de estudos/build/
-/Projeto de estudos/dist/
+/build/
+/dist/
+/nbproject/private/
+/target/
+/.vscode/

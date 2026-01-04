@@ -1,4 +1,4 @@
-package TiposDeDados;
+package tiposdedados;
 
 /**
  * Exemplo Comentarios: essa clase demostra utilizaçao de variaveis em uma 

@@ -1,4 +1,4 @@
-package TiposDeDados;
+package tiposdedados;
 
 public class HelloWorld {
     public static void main (String[]args){
