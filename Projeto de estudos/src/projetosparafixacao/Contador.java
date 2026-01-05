@@ -1,7 +1,7 @@
 package projetosparafixacao;
 import javax.swing.JOptionPane;
 
-public class ContadorWhile {
+public class Contador {
     public static void main(String args[]){
         try{
             int limite = Integer.parseInt(JOptionPane.showInputDialog("Digite a quantidade"));

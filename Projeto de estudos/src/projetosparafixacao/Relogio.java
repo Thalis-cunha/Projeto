@@ -1,6 +1,6 @@
 package projetosparafixacao;
 
-public class RelogioFor {
+public class Relogio {
     public static void main(String args[]){
         int horas, minutos, segundos;
         for (horas = 0; horas < 24; horas++){

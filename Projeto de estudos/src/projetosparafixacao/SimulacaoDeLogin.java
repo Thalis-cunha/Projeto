@@ -2,7 +2,7 @@ package projetosparafixacao;
 
 import javax.swing.JOptionPane;
 
-public class SimulacaoDeLoginWhile {
+public class SimulacaoDeLogin {
     public static void main(String args[]){
         
         String senhaCorreta = "123";

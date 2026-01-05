@@ -1,7 +1,7 @@
 package projetosparafixacao;  
 import javax.swing.JOptionPane;
 
-public class ProdutoComDescontoIfElse {
+public class ProdutoComDesconto {
     public static void main(String[] args) {
 
         String preco = JOptionPane.showInputDialog("Forneça o valor do produto");
