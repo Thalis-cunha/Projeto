@@ -4,5 +4,3 @@ aqui voce encontrara meu dia a dia de estudos java, a pagina sera atualizada sem
 
 
 conteudo em pastas ja foram estudados e provavelmente serao revisados mais adiante para melhor fixacao.
-
-conteudo fora de pastas sao conteudos ou projetos que estao sendo estudados no momento.
