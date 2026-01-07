@@ -3,8 +3,8 @@ package criacaodemetodos;
 public class SemRetorno {
     public static void main(String[] args) {
         
-        imprimir ();
-        imprimirTexto ("Ola");
+        imprimir();
+        imprimirTexto("Ola");
         mostrarQuadrado (10);
         somar (10, 20);
         mostrarMaior (10, 20, 30);
