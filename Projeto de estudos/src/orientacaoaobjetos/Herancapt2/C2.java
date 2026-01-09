@@ -1,4 +1,4 @@
-package orientacaoaobjetos.pacote1;
+package orientacaoaobjetos.Herancapt2;
 
 public class C2 {
     public int subtrair(int a, int b) {

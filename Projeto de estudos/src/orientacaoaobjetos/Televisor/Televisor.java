@@ -1,4 +1,4 @@
-package orientacaoaobjetos;
+package orientacaoaobjetos.Televisor;
 
 
 public class Televisor {

@@ -1,5 +1,7 @@
 package orientacaoaobjetos;
 
+import orientacaoaobjetos.Televisor.Televisor;
+
 public class UsaTelevisor {
     public static void main(String[] args) {
         
