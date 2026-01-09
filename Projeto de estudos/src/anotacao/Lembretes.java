@@ -25,4 +25,20 @@ Diversos Metodos
 
 */
 
-//em breve anotarei mais lembretes nessa pagina
+
+
+/*       ----- PROGRAMAÇAO ORIENTADA A OBJETOS ------
+
+ 📌 explicação ajustada (para iniciantes)
+
+“Em Java simples, eu crio uma variável como int i = 10, que guarda só um valor.
+
+Em Orientação a Objetos, eu crio um objeto, por exemplo Camisa futebol = new Camisa().
+
+Esse objeto representa uma camisa de futebol e dentro dele existem várias informações juntas, como número, preço, tamanho etc.
+
+Assim, ao invés de trabalhar com vários int e double separados, eu trabalho com um objeto que representa algo do mundo real.”
+
+
+
+*/
