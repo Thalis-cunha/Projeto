@@ -1,4 +1,4 @@
-package orientacaoaobjetos.Heranca;
+package orientacaoaobjetos.HerancaPolimorfismo;
 
 public class PessoaFisica extends Pessoa {
     private String rg;
@@ -7,5 +7,11 @@ public class PessoaFisica extends Pessoa {
     }
     public String getRg() {
         return (rg);
+    }
+    
+    
+     //polimorfismo abaixo
+    public void mostrarClasse() {
+        System.out.println("classe Fisica");
     }
 }

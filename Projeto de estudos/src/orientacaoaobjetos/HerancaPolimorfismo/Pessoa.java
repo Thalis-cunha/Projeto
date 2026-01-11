@@ -1,4 +1,4 @@
-package orientacaoaobjetos.Heranca;
+package orientacaoaobjetos.HerancaPolimorfismo;
 
 public class Pessoa {
     private String nome;
@@ -8,5 +8,12 @@ public class Pessoa {
     public String getNome() {
         return (nome);
     };
+    
+    
+    
+    //polimorfismo abaixo
+    public void mostrarClasse() {
+        System.out.println("classe Pessoa");
+    }
     
 }

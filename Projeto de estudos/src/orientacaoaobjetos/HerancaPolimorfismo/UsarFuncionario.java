@@ -1,4 +1,4 @@
-package orientacaoaobjetos.Heranca;
+package orientacaoaobjetos.HerancaPolimorfismo;
 
 public class UsarFuncionario {
     public static void main(String[] args) {
@@ -9,6 +9,12 @@ public class UsarFuncionario {
         System.out.println(funcionario.getNome());
         System.out.println(funcionario.getRg());
         System.out.println(funcionario.getCartao());
+    }
+    
+    
+     //polimorfismo abaixo
+    public void mostrarClasse() {
+        System.out.println("classe Funcionario");
     }
     
 }

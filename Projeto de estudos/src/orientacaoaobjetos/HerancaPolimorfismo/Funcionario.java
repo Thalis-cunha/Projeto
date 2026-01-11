@@ -1,4 +1,4 @@
-package orientacaoaobjetos.Heranca;
+package orientacaoaobjetos.HerancaPolimorfismo;
 
 public class Funcionario extends PessoaFisica {
     private String cartao;
