@@ -7,7 +7,7 @@ public class CaregarFrame {
     public static void main(String[] args) {
         JFrame frame = new JFrame ("Uso de botoes");
         frame.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
-        frame.getContentPane().add (new GuiCaixaOpcao());
+        frame.getContentPane().add (new GuiBotao());
         frame.setBounds(0, 0, 500, 300);
         frame.setVisible(true);
     }
