@@ -47,7 +47,10 @@ public class GuiMenuPrincipal extends JFrame {
 
         miBotao.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                // aqui vai codigo para chamr o exemplo
+                GuiBotao botao = new GuiBotao();
+                contentPane.removeAll();
+                contentPane.add(botao);
+                contentPane.validate();
             }
         });
 
