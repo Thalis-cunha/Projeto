@@ -9,7 +9,7 @@ public class GuiMenuPrincipal extends JFrame {
     private Container contentPane;
     private JMenuBar mnBarra;
     private JMenu mnArquivo, mnExemplos;
-    private JMenuItem miSair, miBotao, miCaixaOpcao;  
+    private JMenuItem miSair, miBotao, miCaixaOpcao;
 
     public GuiMenuPrincipal() {
         inicializarComponentes();
@@ -19,7 +19,7 @@ public class GuiMenuPrincipal extends JFrame {
     private void inicializarComponentes() {
         setTitle("Menu Principal");
         setBounds(0, 0, 800, 600);
-        contentPane = getContentPane();   
+        contentPane = getContentPane();
         mnBarra = new JMenuBar();
         mnArquivo = new JMenu("Arquivo");
         mnArquivo.setMnemonic('A');
@@ -29,10 +29,10 @@ public class GuiMenuPrincipal extends JFrame {
         miSair.setAccelerator(KeyStroke.getKeyStroke(
                 KeyEvent.VK_S, ActionEvent.ALT_MASK));
         miBotao = new JMenuItem("Botao");
-        miCaixaOpcao = new JMenuItem("Caixa de selecao");             
+        miCaixaOpcao = new JMenuItem("Caixa de selecao");
         mnArquivo.add(miSair);
         mnExemplos.add(miBotao);
-        mnExemplos.add(miCaixaOpcao);           
+        mnExemplos.add(miCaixaOpcao);
         mnBarra.add(mnArquivo);
         mnBarra.add(mnExemplos);
         setJMenuBar(mnBarra);
@@ -50,8 +50,8 @@ public class GuiMenuPrincipal extends JFrame {
                 // aqui vai codigo para chamr o exemplo
             }
         });
-        
-        miCaixaOpcao.addActionListener(new ActionListener() {          
+
+        miCaixaOpcao.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 GuiCaixaOpcao label = new GuiCaixaOpcao();
                 contentPane.removeAll();
@@ -70,13 +70,12 @@ public class GuiMenuPrincipal extends JFrame {
         frame.setVisible(true);
     }
 
-
-
-public static void main(String[] args) {             // metodo main adicionado para verificar atualizacoes de codigos, com possivel exclusao de trecho apos comclusao total do codigo.
-    SwingUtilities.invokeLater(() -> {
-        GuiMenuPrincipal frame = new GuiMenuPrincipal();
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setLocationRelativeTo(null);
-        frame.setVisible(true); 
-    });
-}}
+    public static void main(String[] args) {             // metodo main adicionado para verificar atualizacoes de codigos, com possivel exclusao de trecho apos comclusao total do codigo.
+        SwingUtilities.invokeLater(() -> {
+            GuiMenuPrincipal frame = new GuiMenuPrincipal();
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            frame.setLocationRelativeTo(null);
+            frame.setVisible(true);
+        });
+    }
+}
