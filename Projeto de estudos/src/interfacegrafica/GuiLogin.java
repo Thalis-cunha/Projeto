@@ -47,7 +47,8 @@ public class GuiLogin extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 String senha = String.valueOf(pfSenha.getPassword());
             if (tfLogin.getText().equals("java") && senha.equals("java")) {
-            frame.setVisible (false);
+            frame.dispose();
+            GuiMenuPrincipal.abrir();
             //guiMenuPrioncipal.abrir();
             
             } else {

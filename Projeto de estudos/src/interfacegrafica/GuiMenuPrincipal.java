@@ -9,7 +9,7 @@ public class GuiMenuPrincipal extends JFrame {
     private Container contentPane;
     private JMenuBar mnBarra;
     private JMenu mnArquivo, mnExemplos;
-    private JMenuItem miSair, miBotao, miCaixaOpcao;
+    private JMenuItem miSair, miBotao, miCaixaOpcao, miRadio, miLista, miLabel;
 
     public GuiMenuPrincipal() {
         inicializarComponentes();
@@ -30,12 +30,19 @@ public class GuiMenuPrincipal extends JFrame {
                 KeyEvent.VK_S, ActionEvent.ALT_MASK));
         miBotao = new JMenuItem("Botao");
         miCaixaOpcao = new JMenuItem("Caixa de selecao");
+        miRadio = new JMenuItem("Radio");
+        miLista = new JMenuItem("Lista");          //---------
+        miLabel = new JMenuItem("Label");
         mnArquivo.add(miSair);
         mnExemplos.add(miBotao);
         mnExemplos.add(miCaixaOpcao);
+        mnExemplos.add(miRadio);
+        mnExemplos.add(miLista); 
+        mnExemplos.add(miLabel);                  //--------
         mnBarra.add(mnArquivo);
         mnBarra.add(mnExemplos);
         setJMenuBar(mnBarra);
+        
     }
 
     private void definirEventos() {
@@ -62,7 +69,42 @@ public class GuiMenuPrincipal extends JFrame {
                 contentPane.validate();
             }
         });
-    }
+    
+    
+        miRadio.addActionListener(new ActionListener() {
+             public void actionPerformed(ActionEvent e) {
+                GuiRadio radio = new GuiRadio();
+                contentPane.removeAll();
+                contentPane.add(radio);
+                contentPane.revalidate();
+                contentPane.repaint();
+            }
+        });
+        
+        
+        miLista.addActionListener(new ActionListener() {
+             public void actionPerformed(ActionEvent e) {
+                GuiLista lista = new GuiLista();
+                contentPane.removeAll();
+                contentPane.add(lista);
+                contentPane.revalidate();
+                contentPane.repaint();
+            }
+        });
+         
+        miLabel.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                GuiLabel label = new GuiLabel();
+                contentPane.removeAll();
+                contentPane.add(label);
+                contentPane.revalidate();
+                contentPane.repaint();
+            }
+        });
+
+    
+   }     
+
 
     public static void abrir() {
         GuiMenuPrincipal frame = new GuiMenuPrincipal();
@@ -72,13 +114,7 @@ public class GuiMenuPrincipal extends JFrame {
                 (tela.height - frame.getSize().height) / 2);
         frame.setVisible(true);
     }
-
-    public static void main(String[] args) {             // metodo main adicionado para verificar atualizacoes de codigos, com possivel exclusao de trecho apos comclusao total do codigo.
-        SwingUtilities.invokeLater(() -> {
-            GuiMenuPrincipal frame = new GuiMenuPrincipal();
-            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            frame.setLocationRelativeTo(null);
-            frame.setVisible(true);
-        });
-    }
 }
+
+
+//----------- execute GuiLogin.java para vizualizar tudo criado em um menu visivel ---------------
