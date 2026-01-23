@@ -9,7 +9,7 @@ public class GuiMenuPrincipal extends JFrame {
     private Container contentPane;
     private JMenuBar mnBarra;
     private JMenu mnArquivo, mnExemplos;
-    private JMenuItem miSair, miBotao, miCaixaOpcao, miRadio, miLista, miLabel;
+    private JMenuItem miSair, miBotao, miCaixaOpcao, miRadio, miLista, miLabel, miCombo, miAreaDeTexto, miDialogoMensagem;
 
     public GuiMenuPrincipal() {
         inicializarComponentes();
@@ -33,12 +33,18 @@ public class GuiMenuPrincipal extends JFrame {
         miRadio = new JMenuItem("Radio");
         miLista = new JMenuItem("Lista");          //---------
         miLabel = new JMenuItem("Label");
+        miCombo = new JMenuItem("Combo");
+        miAreaDeTexto = new JMenuItem("AreaDeTexto");
+        miDialogoMensagem = new JMenuItem("AreaDeMensagem");
         mnArquivo.add(miSair);
         mnExemplos.add(miBotao);
         mnExemplos.add(miCaixaOpcao);
         mnExemplos.add(miRadio);
         mnExemplos.add(miLista); 
-        mnExemplos.add(miLabel);                  //--------
+        mnExemplos.add(miLabel);                  
+        mnExemplos.add(miCombo);                  //--------
+        mnExemplos.add(miAreaDeTexto);                  
+        mnExemplos.add(miDialogoMensagem);                  
         mnBarra.add(mnArquivo);
         mnBarra.add(mnExemplos);
         setJMenuBar(mnBarra);
@@ -101,6 +107,36 @@ public class GuiMenuPrincipal extends JFrame {
                 contentPane.repaint();
             }
         });
+        
+         miCombo.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                GuiCombo label = new GuiCombo();
+                contentPane.removeAll();
+                contentPane.add(label);
+                contentPane.revalidate();
+                contentPane.repaint();
+            }
+        });
+         
+         miAreaDeTexto.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                GuiAreaDeTexto label = new GuiAreaDeTexto();
+                contentPane.removeAll();
+                contentPane.add(label);
+                contentPane.revalidate();
+                contentPane.repaint();
+            }
+        });
+         
+         miDialogoMensagem.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                GuiDialogoMensagem label = new GuiDialogoMensagem();
+                contentPane.removeAll();
+                contentPane.add(label);
+                contentPane.revalidate();
+                contentPane.repaint();
+            }
+        });
 
     
    }     
@@ -115,6 +151,5 @@ public class GuiMenuPrincipal extends JFrame {
         frame.setVisible(true);
     }
 }
-
 
 //----------- execute GuiLogin.java para vizualizar tudo criado em um menu visivel ---------------
