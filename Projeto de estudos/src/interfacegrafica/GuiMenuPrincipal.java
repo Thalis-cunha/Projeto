@@ -126,8 +126,7 @@ public class GuiMenuPrincipal extends JFrame {
                 contentPane.revalidate();
                 contentPane.repaint();
             }
-        });
-         
+        });       
          miDialogoMensagem.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 GuiDialogoMensagem label = new GuiDialogoMensagem();
@@ -136,9 +135,7 @@ public class GuiMenuPrincipal extends JFrame {
                 contentPane.revalidate();
                 contentPane.repaint();
             }
-        });
-
-    
+        });  
    }     
 
 
