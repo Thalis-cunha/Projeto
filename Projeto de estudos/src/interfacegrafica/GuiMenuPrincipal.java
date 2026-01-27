@@ -31,7 +31,7 @@ public class GuiMenuPrincipal extends JFrame {
         miBotao = new JMenuItem("Botao");
         miCaixaOpcao = new JMenuItem("Caixa de selecao");
         miRadio = new JMenuItem("Radio");
-        miLista = new JMenuItem("Lista");          
+        miLista = new JMenuItem("Lista");
         miLabel = new JMenuItem("Label");
         miCombo = new JMenuItem("Combo");
         miAreaDeTexto = new JMenuItem("AreaDeTexto");
@@ -41,16 +41,16 @@ public class GuiMenuPrincipal extends JFrame {
         mnExemplos.add(miBotao);
         mnExemplos.add(miCaixaOpcao);
         mnExemplos.add(miRadio);
-        mnExemplos.add(miLista); 
-        mnExemplos.add(miLabel);                  
-        mnExemplos.add(miCombo);                  
-        mnExemplos.add(miAreaDeTexto);                  
+        mnExemplos.add(miLista);
+        mnExemplos.add(miLabel);
+        mnExemplos.add(miCombo);
+        mnExemplos.add(miAreaDeTexto);
         mnExemplos.add(miDialogoMensagem);              //--------    
-        mnExemplos.add(miDialogoConfirmacao);                  
+        mnExemplos.add(miDialogoConfirmacao);
         mnBarra.add(mnArquivo);
         mnBarra.add(mnExemplos);
         setJMenuBar(mnBarra);
-        
+
     }
 
     private void definirEventos() {
@@ -77,10 +77,9 @@ public class GuiMenuPrincipal extends JFrame {
                 contentPane.validate();
             }
         });
-    
-    
+
         miRadio.addActionListener(new ActionListener() {
-             public void actionPerformed(ActionEvent e) {
+            public void actionPerformed(ActionEvent e) {
                 GuiRadio radio = new GuiRadio();
                 contentPane.removeAll();
                 contentPane.add(radio);
@@ -88,10 +87,9 @@ public class GuiMenuPrincipal extends JFrame {
                 contentPane.repaint();
             }
         });
-        
-        
+
         miLista.addActionListener(new ActionListener() {
-             public void actionPerformed(ActionEvent e) {
+            public void actionPerformed(ActionEvent e) {
                 GuiLista lista = new GuiLista();
                 contentPane.removeAll();
                 contentPane.add(lista);
@@ -99,7 +97,7 @@ public class GuiMenuPrincipal extends JFrame {
                 contentPane.repaint();
             }
         });
-         
+
         miLabel.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 GuiLabel label = new GuiLabel();
@@ -109,8 +107,8 @@ public class GuiMenuPrincipal extends JFrame {
                 contentPane.repaint();
             }
         });
-        
-         miCombo.addActionListener(new ActionListener() {
+
+        miCombo.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 GuiCombo label = new GuiCombo();
                 contentPane.removeAll();
@@ -119,8 +117,8 @@ public class GuiMenuPrincipal extends JFrame {
                 contentPane.repaint();
             }
         });
-         
-         miAreaDeTexto.addActionListener(new ActionListener() {
+
+        miAreaDeTexto.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 GuiAreaDeTexto label = new GuiAreaDeTexto();
                 contentPane.removeAll();
@@ -128,8 +126,8 @@ public class GuiMenuPrincipal extends JFrame {
                 contentPane.revalidate();
                 contentPane.repaint();
             }
-        });       
-         miDialogoMensagem.addActionListener(new ActionListener() {
+        });
+        miDialogoMensagem.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 GuiDialogoMensagem label = new GuiDialogoMensagem();
                 contentPane.removeAll();
@@ -137,8 +135,8 @@ public class GuiMenuPrincipal extends JFrame {
                 contentPane.revalidate();
                 contentPane.repaint();
             }
-        });  
-         miDialogoConfirmacao.addActionListener(new ActionListener() {
+        });
+        miDialogoConfirmacao.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 GuiDialogoConfirmacao label = new GuiDialogoConfirmacao();
                 contentPane.removeAll();
@@ -146,9 +144,8 @@ public class GuiMenuPrincipal extends JFrame {
                 contentPane.revalidate();
                 contentPane.repaint();
             }
-        });  
-   }     
-
+        });
+    }
 
     public static void abrir() {
         GuiMenuPrincipal frame = new GuiMenuPrincipal();
@@ -159,5 +156,6 @@ public class GuiMenuPrincipal extends JFrame {
         frame.setVisible(true);
     }
 }
+
 
 //----------- execute GuiLogin.java para vizualizar tudo criado em um menu visivel ---------------
