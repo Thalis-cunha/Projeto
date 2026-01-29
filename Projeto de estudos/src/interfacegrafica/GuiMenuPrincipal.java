@@ -9,7 +9,7 @@ public class GuiMenuPrincipal extends JFrame {
     private Container contentPane;
     private JMenuBar mnBarra;
     private JMenu mnArquivo, mnExemplos;
-    private JMenuItem miSair, miBotao, miCaixaOpcao, miRadio, miLista, miLabel, miCombo, miAreaDeTexto, miDialogoMensagem, miDialogoConfirmacao;
+    private JMenuItem miSair, miBotao, miCaixaOpcao, miRadio, miLista, miLabel, miCombo, miAreaDeTexto, miDialogoMensagem, miDialogoConfirmacao, miDialogoOpcao;
 
     public GuiMenuPrincipal() {
         inicializarComponentes();
@@ -35,8 +35,9 @@ public class GuiMenuPrincipal extends JFrame {
         miLabel = new JMenuItem("Label");
         miCombo = new JMenuItem("Combo");
         miAreaDeTexto = new JMenuItem("AreaDeTexto");
-        miDialogoMensagem = new JMenuItem("AreaDeMensagem");        //---------
-        miDialogoConfirmacao = new JMenuItem("MensagemDeConfirmacao");
+        miDialogoMensagem = new JMenuItem("Area De Mensagem");        //---------
+        miDialogoConfirmacao = new JMenuItem("Mensagem De Confirmacao");
+        miDialogoOpcao = new JMenuItem("Mensagem De Opcao");
         mnArquivo.add(miSair);
         mnExemplos.add(miBotao);
         mnExemplos.add(miCaixaOpcao);
@@ -47,6 +48,7 @@ public class GuiMenuPrincipal extends JFrame {
         mnExemplos.add(miAreaDeTexto);
         mnExemplos.add(miDialogoMensagem);              //--------    
         mnExemplos.add(miDialogoConfirmacao);
+        mnExemplos.add(miDialogoOpcao);
         mnBarra.add(mnArquivo);
         mnBarra.add(mnExemplos);
         setJMenuBar(mnBarra);
@@ -139,6 +141,15 @@ public class GuiMenuPrincipal extends JFrame {
         miDialogoConfirmacao.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 GuiDialogoConfirmacao label = new GuiDialogoConfirmacao();
+                contentPane.removeAll();
+                contentPane.add(label);
+                contentPane.revalidate();
+                contentPane.repaint();
+            }
+        });
+        miDialogoOpcao.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                GuiDialogoOpcao label = new GuiDialogoOpcao();
                 contentPane.removeAll();
                 contentPane.add(label);
                 contentPane.revalidate();
