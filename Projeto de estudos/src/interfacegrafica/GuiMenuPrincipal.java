@@ -9,7 +9,10 @@ public class GuiMenuPrincipal extends JFrame {
     private Container contentPane;
     private JMenuBar mnBarra;
     private JMenu mnArquivo, mnExemplos;
-    private JMenuItem miSair, miBotao, miCaixaOpcao, miRadio, miLista, miLabel, miCombo, miAreaDeTexto, miDialogoMensagem, miDialogoConfirmacao, miDialogoOpcao;
+    private JMenuItem miSair, miBotao, miCaixaOpcao, miRadio, miLista,
+            miLabel, miCombo, miAreaDeTexto,
+            miDialogoMensagem, miDialogoConfirmacao, miDialogoOpcao,
+            miBarraRolagem;
 
     public GuiMenuPrincipal() {
         inicializarComponentes();
@@ -19,15 +22,22 @@ public class GuiMenuPrincipal extends JFrame {
     private void inicializarComponentes() {
         setTitle("Menu Principal");
         setBounds(0, 0, 800, 600);
+
         contentPane = getContentPane();
+
         mnBarra = new JMenuBar();
+
         mnArquivo = new JMenu("Arquivo");
         mnArquivo.setMnemonic('A');
+
         mnExemplos = new JMenu("Exemplos");
         mnExemplos.setMnemonic('E');
+
         miSair = new JMenuItem("Sair", new ImageIcon("icones/sair.png"));
-        miSair.setAccelerator(KeyStroke.getKeyStroke(
-                KeyEvent.VK_S, ActionEvent.ALT_MASK));
+        miSair.setAccelerator(
+                KeyStroke.getKeyStroke(KeyEvent.VK_S, ActionEvent.ALT_MASK)
+        );
+
         miBotao = new JMenuItem("Botao");
         miCaixaOpcao = new JMenuItem("Caixa de selecao");
         miRadio = new JMenuItem("Radio");
@@ -35,10 +45,13 @@ public class GuiMenuPrincipal extends JFrame {
         miLabel = new JMenuItem("Label");
         miCombo = new JMenuItem("Combo");
         miAreaDeTexto = new JMenuItem("AreaDeTexto");
-        miDialogoMensagem = new JMenuItem("Area De Mensagem");        //---------
+        miDialogoMensagem = new JMenuItem("Area De Mensagem");
         miDialogoConfirmacao = new JMenuItem("Mensagem De Confirmacao");
         miDialogoOpcao = new JMenuItem("Mensagem De Opcao");
+        miBarraRolagem = new JMenuItem("Barra Rolagem");
+
         mnArquivo.add(miSair);
+
         mnExemplos.add(miBotao);
         mnExemplos.add(miCaixaOpcao);
         mnExemplos.add(miRadio);
@@ -46,16 +59,19 @@ public class GuiMenuPrincipal extends JFrame {
         mnExemplos.add(miLabel);
         mnExemplos.add(miCombo);
         mnExemplos.add(miAreaDeTexto);
-        mnExemplos.add(miDialogoMensagem);              //--------    
+        mnExemplos.add(miDialogoMensagem);
         mnExemplos.add(miDialogoConfirmacao);
         mnExemplos.add(miDialogoOpcao);
+        mnExemplos.add(miBarraRolagem);
+
         mnBarra.add(mnArquivo);
         mnBarra.add(mnExemplos);
-        setJMenuBar(mnBarra);
 
+        setJMenuBar(mnBarra);
     }
 
     private void definirEventos() {
+
         miSair.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 System.exit(0);
@@ -64,109 +80,88 @@ public class GuiMenuPrincipal extends JFrame {
 
         miBotao.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                GuiBotao botao = new GuiBotao();
-                contentPane.removeAll();
-                contentPane.add(botao);
-                contentPane.validate();
+                trocarTela(new GuiBotao());
             }
         });
 
         miCaixaOpcao.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                GuiCaixaOpcao label = new GuiCaixaOpcao();
-                contentPane.removeAll();
-                contentPane.add(label);
-                contentPane.validate();
+                trocarTela(new GuiCaixaOpcao());
             }
         });
 
         miRadio.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                GuiRadio radio = new GuiRadio();
-                contentPane.removeAll();
-                contentPane.add(radio);
-                contentPane.revalidate();
-                contentPane.repaint();
+                trocarTela(new GuiRadio());
             }
         });
 
         miLista.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                GuiLista lista = new GuiLista();
-                contentPane.removeAll();
-                contentPane.add(lista);
-                contentPane.revalidate();
-                contentPane.repaint();
+                trocarTela(new GuiLista());
             }
         });
 
         miLabel.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                GuiLabel label = new GuiLabel();
-                contentPane.removeAll();
-                contentPane.add(label);
-                contentPane.revalidate();
-                contentPane.repaint();
+                trocarTela(new GuiLabel());
             }
         });
 
         miCombo.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                GuiCombo label = new GuiCombo();
-                contentPane.removeAll();
-                contentPane.add(label);
-                contentPane.revalidate();
-                contentPane.repaint();
+                trocarTela(new GuiCombo());
             }
         });
 
         miAreaDeTexto.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                GuiAreaDeTexto label = new GuiAreaDeTexto();
-                contentPane.removeAll();
-                contentPane.add(label);
-                contentPane.revalidate();
-                contentPane.repaint();
+                trocarTela(new GuiAreaDeTexto());
             }
         });
+
         miDialogoMensagem.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                GuiDialogoMensagem label = new GuiDialogoMensagem();
-                contentPane.removeAll();
-                contentPane.add(label);
-                contentPane.revalidate();
-                contentPane.repaint();
+                trocarTela(new GuiDialogoMensagem());
             }
         });
+
         miDialogoConfirmacao.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                GuiDialogoConfirmacao label = new GuiDialogoConfirmacao();
-                contentPane.removeAll();
-                contentPane.add(label);
-                contentPane.revalidate();
-                contentPane.repaint();
+                trocarTela(new GuiDialogoConfirmacao());
             }
         });
+
         miDialogoOpcao.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                GuiDialogoOpcao label = new GuiDialogoOpcao();
-                contentPane.removeAll();
-                contentPane.add(label);
-                contentPane.revalidate();
-                contentPane.repaint();
+                trocarTela(new GuiDialogoOpcao());
             }
         });
+        miBarraRolagem.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                trocarTela(new GuiBarraRolagem());
+            }
+        });
+    }
+
+    // 🔁 método centralizado (reduz duplicação)
+    private void trocarTela(JPanel painel) {
+        contentPane.removeAll();
+        contentPane.add(painel);
+        contentPane.revalidate();
+        contentPane.repaint();
     }
 
     public static void abrir() {
         GuiMenuPrincipal frame = new GuiMenuPrincipal();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
         Dimension tela = Toolkit.getDefaultToolkit().getScreenSize();
-        frame.setLocation((tela.width - frame.getSize().width) / 2,
-                (tela.height - frame.getSize().height) / 2);
+        frame.setLocation(
+                (tela.width - frame.getSize().width) / 2,
+                (tela.height - frame.getSize().height) / 2
+        );
+
         frame.setVisible(true);
     }
 }
-
-
-//----------- execute GuiLogin.java para vizualizar tudo criado em um menu visivel ---------------
