@@ -29,6 +29,8 @@ Diversos Metodos
 
 /*       ----- PROGRAMAÇAO ORIENTADA A OBJETOS ------
 
+em OO as variaveis sao as informaçoes na tela, e os comportamentos sao os metodos que sao as açoes que o objeto pode realizar.
+
  📌 explicação ajustada (para iniciantes)
 
 “Em Java simples, eu crio uma variável como int i = 10, que guarda só um valor.
