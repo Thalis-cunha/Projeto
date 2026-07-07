@@ -1,6 +1,8 @@
-package orientacaoaobjetos;
+package orientacaoaobjetos.Televisor;
 
-public class UsarTelevisorEncapsulada {
+import orientacaoaobjetos.TelevisorEncapsulada;
+
+public class UsaTelevisorEncapsulada {
     public static void main(String[] args) {
         
         TelevisorEncapsulada tv = new TelevisorEncapsulada();
