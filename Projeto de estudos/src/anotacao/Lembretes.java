@@ -3,7 +3,11 @@ package anotacao;
 public class Lembretes {    
 }
 
-/* 
+/*      na parte de interface, tem uma classe main para caregar classes sem metodo main, chamada CAREGARFRAME.JAVA
+
+ao executar a classe GuiLogin com login e senha "java" voce executa o todo em um menu, animado e de facil vizualizacao.
+
+
  ? ponto de interrogaçao faz o papel de if em java, ex:  int c = 10, d = 8;    maior = (c > d) ? c : d;
 
 Ao trabalhar com uma grande volume de if deve se usar switch e case, break para melhor legibilidade do codigo.

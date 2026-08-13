@@ -12,7 +12,7 @@ public class GuiMenuPrincipal extends JFrame {
     private JMenuItem miSair, miBotao, miCaixaOpcao, miRadio, miLista,
             miLabel, miCombo, miAreaDeTexto,
             miDialogoMensagem, miDialogoConfirmacao, miDialogoOpcao,
-            miBarraRolagem;
+            miBarraRolagem, miBarraProgresso;                              //adicione mi... para adicionar ao menu
 
     public GuiMenuPrincipal() {
         inicializarComponentes();
@@ -49,6 +49,7 @@ public class GuiMenuPrincipal extends JFrame {
         miDialogoConfirmacao = new JMenuItem("Mensagem De Confirmacao");
         miDialogoOpcao = new JMenuItem("Mensagem De Opcao");
         miBarraRolagem = new JMenuItem("Barra Rolagem");
+        miBarraProgresso = new JMenuItem("Barra Progresso");                    //adicione mi... para adicionar ao menu
 
         mnArquivo.add(miSair);
 
@@ -63,6 +64,7 @@ public class GuiMenuPrincipal extends JFrame {
         mnExemplos.add(miDialogoConfirmacao);
         mnExemplos.add(miDialogoOpcao);
         mnExemplos.add(miBarraRolagem);
+        mnExemplos.add(miBarraProgresso);                                       //adicione mi... para adicionar ao menu
 
         mnBarra.add(mnArquivo);
         mnBarra.add(mnExemplos);
@@ -142,6 +144,11 @@ public class GuiMenuPrincipal extends JFrame {
                 trocarTela(new GuiBarraRolagem());
             }
         });
+        miBarraProgresso.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                trocarTela(new GuiBarraProgresso());
+            }
+        });                                               //adicione mi... para adicionar ao menu fazendo as alteraçoes necessarias.
     }
 
     // 🔁 método centralizado (reduz duplicação)
@@ -166,4 +173,6 @@ public class GuiMenuPrincipal extends JFrame {
     }
 }
 
-//   melhorando a cada dia :)
+/*   melhorando a cada dia :)
+     Basta adicionar o solicitado acima para adicionar mais uma opçao ao menu e viualizar no codigo ao todo executando GuiLogin.
+*/
