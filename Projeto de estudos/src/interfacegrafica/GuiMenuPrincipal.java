@@ -12,7 +12,7 @@ public class GuiMenuPrincipal extends JFrame {
     private JMenuItem miSair, miBotao, miCaixaOpcao, miRadio, miLista,
             miLabel, miCombo, miAreaDeTexto,
             miDialogoMensagem, miDialogoConfirmacao, miDialogoOpcao,
-            miBarraRolagem, miBarraProgresso;                              //adicione mi... para adicionar ao menu
+            miBarraRolagem, miBarraProgresso, miAbas;           //adicione mi... para adicionar ao menu
 
     public GuiMenuPrincipal() {
         inicializarComponentes();
@@ -49,8 +49,14 @@ public class GuiMenuPrincipal extends JFrame {
         miDialogoConfirmacao = new JMenuItem("Mensagem De Confirmacao");
         miDialogoOpcao = new JMenuItem("Mensagem De Opcao");
         miBarraRolagem = new JMenuItem("Barra Rolagem");
-        miBarraProgresso = new JMenuItem("Barra Progresso");                    //adicione mi... para adicionar ao menu
+        miBarraProgresso = new JMenuItem("Barra Progresso"); 
+        miAbas = new JMenuItem("Abas");                                         //adicione mi... para adicionar ao menu
 
+        setJMenuBar(mnBarra);
+        
+        mnBarra.add(mnArquivo);
+        mnBarra.add(mnExemplos);
+        
         mnArquivo.add(miSair);
 
         mnExemplos.add(miBotao);
@@ -64,12 +70,12 @@ public class GuiMenuPrincipal extends JFrame {
         mnExemplos.add(miDialogoConfirmacao);
         mnExemplos.add(miDialogoOpcao);
         mnExemplos.add(miBarraRolagem);
-        mnExemplos.add(miBarraProgresso);                                       //adicione mi... para adicionar ao menu
+        mnExemplos.add(miBarraProgresso);
+        mnExemplos.add(miAbas);                                                 //adicione mi... para adicionar ao menu
 
-        mnBarra.add(mnArquivo);
-        mnBarra.add(mnExemplos);
+       
 
-        setJMenuBar(mnBarra);
+        
     }
 
     private void definirEventos() {
@@ -148,7 +154,13 @@ public class GuiMenuPrincipal extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 trocarTela(new GuiBarraProgresso());
             }
-        });                                               //adicione mi... para adicionar ao menu fazendo as alteraçoes necessarias.
+        });
+        miAbas.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                trocarTela(new GuiAbas());
+            }
+        });  
+                                                                         //adicione mi... para adicionar ao menu fazendo as alteraçoes necessarias.
     }
 
     // 🔁 método centralizado (reduz duplicação)
