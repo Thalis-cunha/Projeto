@@ -8,7 +8,7 @@ public class CaregarFrame {
     public static void main(String[] args) {
         JFrame frame = new JFrame("Testando Janelas");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.getContentPane().add(new FrameInterno());   //altere o nome Gui... para vizualizar a parte do codigo desejada
+        frame.getContentPane().add(new GuiFrameInterno());   //altere o nome Gui... para vizualizar a parte do codigo desejada
         frame.setBounds(0, 0, 400, 300);
         frame.setVisible(true);
     }
