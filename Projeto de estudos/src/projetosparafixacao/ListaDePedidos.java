@@ -105,9 +105,46 @@ public class ListaDePedidos extends JPanel{
     
     
     private void definirEventos(){
-        
-    }
-    
+        btAdicionar.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e) {
+            if(tfProduto.getText().equals("") || tfQuantidade.getText().equals("") || tfPrecoUnitario.getText().equals("")) {
+            JOptionPane.showMessageDialog(pnTable, "Preencha todos os campos!");
+                return;
+        }
+            DefaultTableModel dtm = (DefaultTableModel) table.getModel();
+            dtm.addRow(new Object[] {tfProduto.getText(), tfQuantidade.getText(), tfPrecoUnitario.getText(), "" + df.format(Integer.parseInt(
+                    tfQuantidade.getText()) * Double.parseDouble(tfPrecoUnitario.getText()))});
+                    limparCampos();
+                    calcularTotal();
+            }
+        });
+        btRemover.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent e) {
+                int[] linhas = table.getSelectedRows();
+                DefaultTableModel dtm = (DefaultTableModel) table.getModel();
+                for (int i = (linhas.length -1); i>= 0; --i) {
+                    dtm.removeRow(linhas[i]);
+                }
+                calcularTotal();
+            }
+        });
+    }        
+        private void calcularTotal() {
+            double total = 0;
+            for (int linha = 0; linha < table.getRowCount(); linha++) {
+            String valor = "" + table.getValueAt(linha, 3);
+            valor = valor.replace(".", "");
+            valor = valor.replace(",", ".");
+            total += Double.parseDouble(valor);
+        }
+            tfTotal.setText("" + df.format(total));
+        }
+        private void limparCampos() {
+          tfProduto.setText("");
+          tfQuantidade.setText("1");
+          tfProduto.requestFocus();
+        }                   
 }
 
 //Exercicio de inclusao de grade.
+//é necesario preencher boa parte da tabela manualmente pois é apenas um exemplo.
